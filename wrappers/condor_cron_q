@@ -1,4 +1,4 @@
 #!/bin/sh
 
-. /etc/condor-cron/condor-cron.sh
+. /usr/libexec/condor-cron/condor-cron.sh
 exec /usr/bin/condor_q "$@"
