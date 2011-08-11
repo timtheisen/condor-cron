@@ -13,6 +13,7 @@ my @commands = qw/
     condor_rm
     condor_submit
     condor_version
+    condor_config_val
     /;
 
 my $dir = dirname($0);
