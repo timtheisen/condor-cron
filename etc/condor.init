@@ -27,7 +27,7 @@ pidfile=/var/run/condor-cron/$prog.pid
 . /etc/init.d/functions
 
 # Source condor-cron environment
-[ -f /etc/condor-cron/condor-cron.sh ] && . /etc/condor-cron/condor-cron.sh
+[ -f /usr/libexec/condor-cron/condor-cron.sh ] && . /usr/libexec/condor-cron/condor-cron.sh
 
 # Source networking configuration
 [ -f /etc/sysconfig/network ] && . /etc/sysconfig/network
