@@ -1,4 +1,4 @@
-VERSION = 1.0.4
+VERSION = 1.0.5
 
 _default:
 	@echo "Nothing to make. Try make install"
