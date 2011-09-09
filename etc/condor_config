@@ -1,0 +1,49 @@
+CONDOR_HOST = $(HOSTNAME)
+
+DAEMON_LIST = MASTER SCHEDD
+
+RELEASE_DIR = /usr
+
+SBIN = /usr/sbin
+MASTER       = $(SBIN)/condor_master
+SCHEDD       = $(SBIN)/condor_schedd
+GRIDMANAGER  = $(SBIN)/condor_gridmanager
+GT2_GAHP     = $(SBIN)/gahp_server
+GRID_MONITOR = $(SBIN)/grid_monitor.sh
+
+LOCAL_DIR = /var
+RUN     = $(LOCAL_DIR)/run/condor-cron
+LOG     = $(LOCAL_DIR)/log/condor-cron
+SPOOL   = $(LOCAL_DIR)/lib/condor-cron/spool
+EXECUTE = $(LOCAL_DIR)/lib/condor-cron/execute
+LOCK    = $(LOCAL_DIR)/lock/condor-cron
+
+MASTER_ADDRESS_FILE = $(LOG)/.master_address
+SCHEDD_ADDRESS_FILE = $(SPOOL)/.schedd_address
+
+LOCAL_CONFIG_DIR = /etc/condor-cron/config.d
+LOCAL_CONFIG_DIR_EXCLUDE_REGEXP = ^((\..*)|(.*~)|(#.*)|(.*\.rpmsave)|(.*\.rpmnew))$
+
+CONDOR_ADMIN = root@$(FULL_HOSTNAME)
+MAIL         = /bin/mail
+
+# The UID.GID of the user to run Condor-Cron.  We have to set this
+# at install time since we create the cndrcron user
+CONDOR_IDS=100.101
+
+# CA certificate directory for Condor-G
+GSI_DAEMON_TRUSTED_CA_DIR = /etc/grid-security/certificates
+
+## Condor-cron does not need to listen on a public interface
+NETWORK_INTERFACE = 127.0.0.1
+
+EMAIL_DOMAIN = $(FULL_HOSTNAME)
+
+#SEC_PASSWORD_FILE = $(LOCAL_DIR)/lib/condor-cron/pool_password
+#SEC_DAEMON_AUTHENTICATION = REQUIRED
+#SEC_DAEMON_INTEGRITY = REQUIRED
+#SEC_DAEMON_AUTHENTICATION_METHODS = FS, PASSWORD
+#SEC_NEGOTIATOR_AUTHENTICATION = REQUIRED
+#SEC_NEGOTIATOR_INTEGRITY = REQUIRED
+#SEC_NEGOTIATOR_AUTHENTICATION_METHODS = PASSWORD
+#SEC_CLIENT_AUTHENTICATION_METHODS = FS, PASSWORD
