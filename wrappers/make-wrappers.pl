@@ -28,7 +28,7 @@ foreach my $cmd (@commands) {
     print OUT "#!/bin/sh\n";
     print OUT "\n";
     print OUT ". /usr/libexec/condor-cron/condor-cron.sh\n";
-    print OUT "exec /usr/bin/$cmd \"\$\@\"\n";
+    print OUT "exec $cmd \"\$\@\"\n";
 
     close(OUT);
 
