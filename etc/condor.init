@@ -169,7 +169,9 @@ running=$?
 
 if [ "$1" != "status" ]; then
     # Report that $prog does not exist, or is not executable
-    if [ ! -x /usr/sbin/$prog ]; then
+    which $prog >/dev/null 2>&1
+    status=$?
+    if [ $status != 0 ]; then
 	echo $"$0: error: program not installed"
 	exit 5
     fi

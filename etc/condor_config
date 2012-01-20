@@ -4,7 +4,7 @@ DAEMON_LIST = MASTER SCHEDD
 
 RELEASE_DIR = /usr
 
-SBIN = /usr/sbin
+SBIN = $(RELEASE_DIR)/sbin
 MASTER       = $(SBIN)/condor_master
 SCHEDD       = $(SBIN)/condor_schedd
 GRIDMANAGER  = $(SBIN)/condor_gridmanager
