@@ -10,6 +10,8 @@ DAEMON_LIST = MASTER SCHEDD
 
 RELEASE_DIR = /usr
 
+LIBEXEC = $(RELEASE_DIR)/libexec/condor
+
 SBIN = $(RELEASE_DIR)/sbin
 MASTER       = $(SBIN)/condor_master
 SCHEDD       = $(SBIN)/condor_schedd
