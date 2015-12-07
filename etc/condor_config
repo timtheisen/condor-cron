@@ -53,6 +53,9 @@ GSI_DAEMON_TRUSTED_CA_DIR = /etc/grid-security/certificates
 ## Condor-cron does not need to listen on a public interface
 NETWORK_INTERFACE = 127.0.0.1
 
+## Condor-cron does not need shared port
+USE_SHARED_PORT = false
+
 EMAIL_DOMAIN = $(FULL_HOSTNAME)
 
 #SEC_PASSWORD_FILE = $(LOCAL_DIR)/lib/condor-cron/pool_password
