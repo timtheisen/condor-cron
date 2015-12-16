@@ -55,6 +55,7 @@ MAIL         = /bin/mail
 GSI_DAEMON_TRUSTED_CA_DIR = /etc/grid-security/certificates
 
 ## Condor-cron does not need to listen on a public interface
+BIND_ALL_INTERFACES = false
 NETWORK_INTERFACE = 127.0.0.1
 
 ## Condor-cron does not need shared port
