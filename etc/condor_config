@@ -58,6 +58,11 @@ GSI_DAEMON_TRUSTED_CA_DIR = /etc/grid-security/certificates
 BIND_ALL_INTERFACES = false
 NETWORK_INTERFACE = 127.0.0.1
 
+## Allow submission to remote schedd's
+## Use '1' instead of 'True' due to the following bug:
+## https://htcondor-wiki.cs.wisc.edu/index.cgi/tktview?tn=5310
+C_GAHP_WORKER_THREAD.BIND_ALL_INTERFACES = 1
+
 ## Condor-cron does not need shared port
 USE_SHARED_PORT = false
 
