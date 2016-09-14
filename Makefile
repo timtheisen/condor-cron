@@ -14,4 +14,5 @@ dist:
 	tar czf condor-cron-$(VERSION).tar.gz condor-cron-$(VERSION)/
 	rm -fr condor-cron-$(VERSION)
 	echo "To install into upstream area run:"
-	echo "  mv condor-cron-$(VERSION).tar.gz /p/vdt/public/html/upstream/condor-cron/"
+	echo "  mkdir -p /p/vdt/public/html/upstream/condor-cron/$(VERSION)"
+	echo "  mv condor-cron-$(VERSION).tar.gz /p/vdt/public/html/upstream/condor-cron/$(VERSION)/"
