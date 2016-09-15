@@ -5,14 +5,13 @@ Wants=network.target
 
 [Service]
 Type = forking
-ExecStart=/etc/init.d/condor-cron start
-ExecStop=/etc/init.d/condor-cron stop
-ExecReload=/etc/init.d/condor-cron reload
+ExecStart=/usr/sbin/condor_cron_master
+ExecStop=/usr/sbin/condor_cron_off
+ExecReload=/usr/sbin/condor_cron_restart
 Restart=always
 RestartSec=5
 StandardOutput=syslog
 LimitNOFILE=16384
-ControlGroup=/condor-cron
 
 [Install]
 WantedBy=multi-user.target

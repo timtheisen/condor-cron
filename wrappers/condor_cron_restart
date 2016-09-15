@@ -1,0 +1,4 @@
+#!/bin/sh
+
+. /usr/libexec/condor-cron/condor-cron.sh
+exec condor_restart "$@"
