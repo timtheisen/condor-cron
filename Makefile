@@ -1,11 +1,5 @@
 VERSION = 1.1.3
 
-_default:
-	@echo "Nothing to make. Try make install"
-
-clean:
-	rm -fr condor-cron-*
-
 dist:
 	mkdir -p condor-cron-$(VERSION)
 	mkdir -p condor-cron-$(VERSION)/wrappers
@@ -16,3 +10,8 @@ dist:
 	echo "To install into upstream area run:"
 	echo "  mkdir -p /p/vdt/public/html/upstream/condor-cron/$(VERSION)"
 	echo "  mv condor-cron-$(VERSION).tar.gz /p/vdt/public/html/upstream/condor-cron/$(VERSION)/"
+
+clean:
+	rm -fr condor-cron-*
+
+.PHONY: dist clean
